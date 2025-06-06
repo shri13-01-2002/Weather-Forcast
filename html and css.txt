@@ -1,0 +1,156 @@
+HTML-It is the standard markup language for creating web pages also known as (HyperText Markup Language).
+    -It is used to structure content on the web, defining elements like headings, paragraphs, links, images, and forms.
+
+Structure of html
+-<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Title</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <!-- Content goes here -->
+  </body>
+</html>
+-An element includes a start tag, content, and end tag.
+
+meta tag-The <meta> tag provides metadata about the HTML document.
+        -such as character set, description, keywords, and viewport settings for responsive design.
+<b>-Bold text without any semantic meaning.
+<i>-Italic text without any semantic meaning.
+<em>-Emphasized text that conveys importance, typically rendered in italics.
+
+Block-level elements (e.g., <div>, <p>)
+-Occupy the full width of their container by default, regardless of their content.
+-Start on a new line (i.e. break the line).
+-You can set width, height, margins, and padding.
+-Often used as containers or structural elements.
+
+Inline elements (e.g., <span>, <a>) 
+-Only take up as much width as their content requires.
+-Do not start on a new line.
+-Respect the flow of surrounding content.
+-Cannot set width and height directly (unless you convert them to block or inline-block).
+
+Semantic tags-It clearly describe the purpose of the HTML element, both to browsers and developers.
+<header>-Introductory content or navigational links at the top
+<nav>-Contains navigation links
+<section>-A thematic grouping of content (like chapters or tabs)
+<article>-A self-contained piece of content (like a blog post)
+<aside>-Related side content (like a sidebar or ad)
+<footer>-Footer of a document or section
+<main>-The main content area, unique to the page
+<figure> / <figcaption>-Multimedia content with captions
+
+Form tag creation-
+html
+<form>
+  <input type="text">
+  <input type="submit">
+</form>
+
+<div>(Non Sementic)
+-The <div> element is a generic container with no inherent meaning.
+-It's commonly used for layout purposes or when no other semantic tag fits.
+-Requires class or id attributes to give it context.
+
+<section> – Semantic
+-Represents a thematic grouping of related content.
+-Usually has a heading (<h1>–<h6>) and forms a logical block within the document.
+-Clearly communicates the content’s purpose to browsers, assistive technologies, and search engines.
+
+Tabel creation
+-Using <table>, <tr>, <td>, <th>:
+-html
+<table>
+  <tr><th>Name</th><th>Age</th></tr>
+  <tr><td>John</td><td>25</td></tr>
+</table>
+
+Formatting Tags
+-These tags are used to style or emphasize parts of the content in an HTML document.
+<b>-Makes text bold (no extra importance)<b>Bold Text</b>
+<strong>-Strong importance (bold + semantic meaning)<strong>Important</strong>
+<i>-Italic text (no emphasis)<i>Italic Text</i>
+<em>-Emphasized text (italic+semantic emphasis)	<em>Important Text</em>
+<u>-Underlines text <u>Underlined</u>
+<mark>-Highlights text with yellow background	<mark>Highlighted</mark>
+<small>-Displays smaller text <small>Fine print</small>
+
+Ordered List
+-Displays items in a specific sequence (numbered or alphabetically)
+-Each item is wrapped in an <li> (list item).
+-<ol>
+  <li>Preheat the oven</li>
+  <li>Mix ingredients</li>
+  <li>Bake for 20 minutes</li>
+</ol>
+
+<ul> — Unordered List
+-Displays items without a particular order
+-Uses bullets (●) by default
+-<ul>
+  <li>Apples</li>
+  <li>Bananas</li>
+  <li>Oranges</li>
+</ul>
+
+CSS-(Cascading Style Sheets)
+   -It is used to style and layout web pages. 
+   -It allows you to control the visual appearance of HTML elements, such as color, font, spacing, alignment, and positioning.
+
+Way To add CSS
+-Inline css-Styles applied directly to individual HTML elements using the style attribute.
+ 	   - Good for quick styling of individual elements or for one-off styles.
+	   -Cannot be reused.
+Syt-<p style="color: red; font-size: 18px;">This is a red, larger text.</p>
+
+-Internal CSS(Using <style> Tag)-Styles are defined inside the <style> tag, which is placed within the <head> section of your HTML document.
+				-Useful when you have a small website or want to style a single page without creating an external CSS file.
+				-Doesn't provide the same reusability as external CSS for multiple pages.
+Syt-
+<style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+    p {
+      color: blue;
+      font-size: 16px;
+    }
+  </style>
+-External CSS (Using <link> Tag)-CSS is written in an external file (e.g., style.css) and linked to the HTML document using the <link> tag in the <head> section.
+				-This is the most efficient method for styling large websites or multiple pages because it allows you to apply the same CSS styles across multiple HTML files.
+				-Styles are separate from content, which keeps the HTML file cleaner and easier to maintain. One CSS file can style multiple pages.
+				-New file is created name style.css in which 
+
+selector-Selectors allow you to target specific elements in your HTML document. 
+-universal-Selects all elements on the page.
+-type-Selects all elements of a specific type (e.g., <h1>, <p>, <div>).
+-class-Selects all elements with a specific class attribute.
+-Id-Selects a single element with a specific ID attribute.
+-Attributes-Selects elements with a specific attribute.
+
+Properties-It define how an element should be styled.
+-Color and Background-Sets the text color where as background Sets the background color of an element.
+-Font and Text-
+-Text Alignment-Aligns the text horizontally (left, center, right, justify).
+-Box model-(Padding, Margin, Border)
+-Positioning-Defines how an element is positioned top, right, bottom, left: Determines the positioning of an element.
+
+BOx Model-describes how every HTML element is wrapped in a rectangular box that consists of the following model.
+-Content-The actual text, image, or other content inside the element.
+-Padding-Space inside the element, between the content and the border.
+-Border-The edge around the padding (can be solid, dashed, etc.).
+-Margin-Space outside the element, between it and neighboring elements.
+syt-.box {                                   default
+  width: 200px;                              -*{
+  padding: 20px;                                box-sizing: border-box;
+  border: 5px solid black;                     }
+  margin: 30px;
+}
+
+
+
+
+
